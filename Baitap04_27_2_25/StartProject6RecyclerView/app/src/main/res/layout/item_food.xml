@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="3dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/imageViewFood"
+                android:src="@drawable/milktea_royal"
+                app:layout_constraintDimensionRatio="640:400"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/constraintGroupInfo"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintGroupInfo"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingLeft="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="6"
+                app:layout_constraintLeft_toRightOf="@id/imageViewFood"
+                app:layout_constraintRight_toLeftOf="@id/constraintGroupNumber"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#E45A5A"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/textViewAddress"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Trà sữa RoyalTea" />
+
+                <TextView
+                    android:id="@+id/textViewAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#A1A0A0"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@id/textViewCategory"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewName"
+                    tools:text="Hẻm 281A Lương Định Của, P. An Phú, Quận 2, TP. HCM" />
+
+                <TextView
+                    android:id="@+id/textViewCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#020000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewOpenTime"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewAddress"
+                    android:textStyle="bold"
+                    tools:text="Trà Sữa" />
+
+                <TextView
+                    android:id="@+id/textViewOpenTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#0FE40F"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewCategory"
+                    tools:text="Cả ngày"
+                    android:drawableStart="@drawable/open_time"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintGroupNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_weight="1.5"
+                app:layout_constraintLeft_toRightOf="@id/constraintGroupInfo"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:textAlignment="center"
+                    android:textColor="#A1A0A0"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/textViewRating"
+                    android:id="@+id/textViewDistance"
+                    android:ellipsize="end"
+                    android:textSize="12sp"
+                    android:maxLines="1"
+                    tools:text="3.4km"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/baseline_near_me_24"/>
+                <TextView
+                    android:textColor="#5CBE5A"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewDistance"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/textViewRating"
+                    android:textSize="16sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    tools:text="4.5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/baseline_star_rate_24"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
